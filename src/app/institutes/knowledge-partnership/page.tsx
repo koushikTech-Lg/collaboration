@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Navbar } from "../../../../components/layout/navbar"
+import { Navbar } from "../../../components/layout/navbar"
 
 export default function KnowledgePartnershipPage() {
   return (

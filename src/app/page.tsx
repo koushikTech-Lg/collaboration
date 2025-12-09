@@ -1,6 +1,6 @@
-import { Navbar } from "../../components/layout/navbar";
-import { HeroBanner } from "../../components/sections/hero-banner";
-import { InstitutesSection } from "../../components/sections/institutes-section"
+import { Navbar } from "../components/layout/navbar";
+import { HeroBanner } from "../sections/home/hero-banner";
+import { InstitutesSection } from "../sections/home/institutes-section"
 
 
 export default function Home() {
