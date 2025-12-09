@@ -33,6 +33,7 @@ export default function CareerSeminarPage() {
             <p className="text-lg text-slate-600">Career Guidance In Finance and Professional Development</p>
           </div>
 
+
           {/* Content */}
           <div className="bg-white rounded-xl border border-slate-200 p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">About This Program</h2>
