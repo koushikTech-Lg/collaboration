@@ -7,6 +7,7 @@ export default function CareerSeminarPage() {
     <main className="w-full">
       <Navbar />
 
+
       <div className="pt-24 pb-12 px-6 bg-gradient-to-br from-slate-50 to-white min-h-screen">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
@@ -32,7 +33,6 @@ export default function CareerSeminarPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Career Seminar</h1>
             <p className="text-lg text-slate-600">Career Guidance In Finance and Professional Development</p>
           </div>
-
 
           {/* Content */}
           <div className="bg-white rounded-xl border border-slate-200 p-8 mb-8">
