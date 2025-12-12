@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { NavMenu, type NavMenuItem } from "./navbar-menu"
+import Container from "../shared/container"
 
 export function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
@@ -39,34 +40,36 @@ export function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center px-6 bg-white/50 backdrop-blur-xl border-b border-white/20 shadow-sm">
-      <div className="max-w-7xl w-full mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
-          <div className="flex-shrink-0 cursor-pointer">
-            <h1 className="text-2xl font-bold text-slate-900 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-              Collab
-            </h1>
+    <nav className="fixed w-full z-50 h-20 flex items-center px-6 bg-white/50 backdrop-blur-xl border-b border-white/20 shadow-sm">
+      <Container className="top-0 left-0 right-0 flex justify-center items-center">
+        <div className=" w-full mx-auto flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/">
+            <div className="flex-shrink-0 cursor-pointer">
+              <h1 className="text-2xl font-bold text-slate-900 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                Collab
+              </h1>
+            </div>
+          </Link>
+
+          {/* Navigation Items */}
+          <div className="flex items-center gap-1">
+            {navItems.map((item) => (
+              <NavMenu
+                key={item.label}
+                item={item}
+                isOpen={openMenu === item.label}
+                onToggle={() => setOpenMenu(openMenu === item.label ? null : item.label)}
+              />
+            ))}
           </div>
-        </Link>
 
-        {/* Navigation Items */}
-        <div className="flex items-center gap-1">
-          {navItems.map((item) => (
-            <NavMenu
-              key={item.label}
-              item={item}
-              isOpen={openMenu === item.label}
-              onToggle={() => setOpenMenu(openMenu === item.label ? null : item.label)}
-            />
-          ))}
+          {/* Contact Button */}
+          <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold text-sm hover:shadow-lg hover:scale-105 transition-all duration-200">
+            Contact Form
+          </button>
         </div>
-
-        {/* Contact Button */}
-        <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold text-sm hover:shadow-lg hover:scale-105 transition-all duration-200">
-          Contact Form
-        </button>
-      </div>
+      </Container>
     </nav>
   )
 }

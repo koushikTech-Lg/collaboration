@@ -2,6 +2,8 @@
 
 import type React from "react"
 import Link from "next/link"
+import { motion, type Variants } from "framer-motion"
+import Container from "@/components/shared/container"
 
 interface InstituteCard {
   id: string
@@ -70,43 +72,79 @@ export function InstitutesSection() {
     },
   ]
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  }
+
+
   return (
     <section className="w-full py-16 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-blue-500 font-semibold text-sm mb-2">Institutes</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Schools, Colleges, B-Schools</h2>
+      <Container>
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-blue-500 font-semibold text-sm mb-2">Institutes</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Schools, Colleges, B-Schools</h2>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {cards.map((card) => (
+              <motion.div key={card.id} variants={cardVariants}>
+                <Link href={card.href}>
+                  <div className="group h-full bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
+                    {/* Icon Container */}
+                    <div className="w-16 h-16 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                      {card.icon}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{card.title}</h3>
+
+                    {/* Subtitle */}
+                    <p className="text-sm text-slate-500 mb-4">{card.subtitle}</p>
+
+                    {/* Description */}
+                    <p className="text-slate-600 mb-6 flex-grow">{card.description}</p>
+
+                    {/* Read More Button */}
+                    <button className="px-6 py-2 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold text-sm hover:bg-slate-900 hover:text-white transition-all duration-300 w-fit">
+                      Read More
+                    </button>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card) => (
-            <Link key={card.id} href={card.href}>
-              <div className="group h-full bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
-                {/* Icon Container */}
-                <div className="w-16 h-16 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                  {card.icon}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{card.title}</h3>
-
-                {/* Subtitle */}
-                <p className="text-sm text-slate-500 mb-4">{card.subtitle}</p>
-
-                {/* Description */}
-                <p className="text-slate-600 mb-6 flex-grow">{card.description}</p>
-
-                {/* Read More Button */}
-                <button className="px-6 py-2 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold text-sm hover:bg-slate-900 hover:text-white transition-all duration-300 w-fit">
-                  Read More
-                </button>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
+      </Container>
     </section>
   )
 }

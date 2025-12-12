@@ -1,0 +1,22 @@
+{
+  "commendations": [
+    {
+      "id": 1,
+      "name": "Jash Amlani",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "The seminar was pretty helpful and informative. All my queries with respect to career choices were clarified brilliantly by Aswini sir. Got to know about finance and accounting-related courses, various permutations and combinations & strategies while undertaking more than one course, and its benefits in the long run."
+    },
+    {
+      "id": 2,
+      "name": "Riya Agarwal",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "\"It is never too late to start\"- One thing Aswini Sir lives by. A mentor who guides you through all your career decisions and always motivates you to invest in yourself. The immense knowledge and experience he holds at such a young age reflects in his humble and down-to-earth personality. He is an inspiration in the true sense for the youth of our generation."
+    },
+    {
+      "id": 3,
+      "name": "Swaraj Singh",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "The Career seminar was eye-opening! Aswini Bhaiya provided valuable insights into career opportunities within and outside the industry. I feel empowered in my career journey now. He leaves no stone unturned. He is an example that nothing is impossible in life if you have the will power to do it. His motto – Invest In Yourself"
+    }
+  ]
+}

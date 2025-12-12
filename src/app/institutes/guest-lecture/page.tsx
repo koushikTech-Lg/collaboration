@@ -1,11 +1,19 @@
 
 import Link from "next/link"
 import { Navbar } from "../../../components/layout/navbar"
+import { GuestLecturer } from "@/sections/guest-lecture/guest-banner"
+import { LectureInsights } from "@/sections/guest-lecture/lecture-insights"
+import { GuestSpeakerProfile } from "@/sections/guest-lecture/guest-speaker-profile"
+import { GuestAchievementCounter } from "@/sections/guest-lecture/guest-achievement-counter"
 
 export default function GuestLecturePage() {
   return (
     <main className="w-full">
       <Navbar />
+    <GuestLecturer />
+    <LectureInsights />
+  <GuestSpeakerProfile />
+  <GuestAchievementCounter />
 
       <div className="pt-24 pb-12 px-6 bg-gradient-to-br from-slate-50 to-white min-h-screen">
         <div className="max-w-4xl mx-auto">
