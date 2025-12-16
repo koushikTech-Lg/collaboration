@@ -1,5 +1,4 @@
 "use client"
-
 import Link from "next/link"
 
 export interface NavMenuItem {
@@ -15,6 +14,9 @@ interface NavMenuProps {
   item: NavMenuItem
   isOpen: boolean
   onToggle: () => void
+  onMouseEnter: () => void
+  onMouseLeave: () => void
+  isScrolled: boolean
 }
 
 function ChevronIcon({ isOpen }: { isOpen: boolean }) {
@@ -35,53 +37,70 @@ function ChevronIcon({ isOpen }: { isOpen: boolean }) {
   )
 }
 
-export function NavMenu({ item, isOpen, onToggle }: NavMenuProps) {
-  const mainButton = (
-    <button
-      onClick={onToggle}
-      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md transition-all"
-    >
-      {item.label}
-      {item.submenu && <ChevronIcon isOpen={isOpen} />}
-    </button>
-  )
+export function NavMenu({ 
+  item, 
+  isOpen, 
+  onToggle, 
+  onMouseEnter, 
+  onMouseLeave, 
+  isScrolled 
+}: NavMenuProps) {
+  // For items without submenu
+  if (!item.submenu) {
+    return (
+      <Link href={item.href || "/"}>
+        <div className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium ${
+          isScrolled ? 'text-slate-900' : 'text-white'
+        }`}>
+          {item.label}
+        </div>
+      </Link>
+    )
+  }
 
-  const mainContent = item.href ? (
-    <Link
-      href={item.href}
-      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-md transition-all"
-    >
-      {item.label}
-      {item.submenu && <ChevronIcon isOpen={isOpen} />}
-    </Link>
-  ) : (
-    mainButton
-  )
-
+  // For items with submenu - use both hover and click events
   return (
-    <div className="relative group">
-      {mainContent}
-
-      {item.submenu && isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-48 bg-white/95 backdrop-blur-md border border-white/20 rounded-lg shadow-lg py-2 z-50">
-          {item.submenu.map((submenuItem, index) =>
-            submenuItem.href ? (
-              <Link
-                key={index}
-                href={submenuItem.href}
-                className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-              >
-                {submenuItem.label}
-              </Link>
-            ) : (
-              <button
-                key={index}
-                className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
-              >
-                {submenuItem.label}
-              </button>
-            ),
-          )}
+    <div 
+      className="relative h-full flex items-center"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      {item.href ? (
+        <Link href={item.href}>
+          <div 
+            onClick={onToggle}
+            className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
+              isScrolled ? 'text-slate-900' : 'text-white'
+            }`}
+          >
+            {item.label}
+            <ChevronIcon isOpen={isOpen} />
+          </div>
+        </Link>
+      ) : (
+        <button
+          onClick={onToggle}
+          className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
+            isScrolled ? 'text-slate-900' : 'text-white'
+          }`}
+        >
+          {item.label}
+          <ChevronIcon isOpen={isOpen} />
+        </button>
+      )}
+      
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div 
+        className="absolute top-full left-0 bg-white rounded-lg shadow-lg py-2 min-w-[200px] z-50 border border-gray-200"
+        >
+          {item.submenu.map((subItem, index) => (
+            <Link key={index} href={subItem.href || "/"}>
+              <div className="px-5 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer text-lg">
+                {subItem.label}
+              </div>
+            </Link>
+          ))}
         </div>
       )}
     </div>

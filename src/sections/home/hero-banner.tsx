@@ -1,109 +1,79 @@
 "use client"
 import Container from "@/components/shared/container"
-import { motion, type Variants } from "framer-motion"
+import { PointerHighlight } from "@/components/UI/pointer-highlight"
+import { motion } from "framer-motion"
+
 export function HeroBanner() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  }
   return (
-
-    <section className="relative w-full min-h-screen  bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden flex items-center justify-center">
+    <section className="relative w-full min-h-screen bg-[#2d4a8f] overflow-hidden flex items-center justify-center pt-32 pb-16 px-4">
       <Container>
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000"></div>
-        </div>
+      {/* Background Grid */}
+      <div className="absolute inset-0 w-full opacity-10 z-10">
+        <img 
+          src="/Gird.png" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-        {/* Content */}
+      {/* Background Vectors - Decorative elements */}
+      <div className="absolute inset-0 w-full ">
+        <img 
+          src="/Background_Vectors.png" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+      {/* Midjourney Image - Abstract curved lines */}
+      <div className="absolute inset-0 w-full opacity-80">
+        <img 
+          src="/Midjourney_Image.png" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#2d4a8f]/50 to-[#2d4a8f]"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Main Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight px-4 w-full">
+            A Single Platform for Institutes, Students &
+            <br />
+            <span className="flex justify-center gap-3">
+            Professionals to
+            <PointerHighlight>
+            <span className="text-orange-400">Collaborate</span>
+            </PointerHighlight>
+            </span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 md:mb-12 leading-relaxed max-w-6xl mx-auto px-4">
+            Host seminars & guest lectures, publish student blogs, hire or get hired, and build academic–industry
+            <br className="hidden md:block" />
+            partnerships - all in one place.
+          </p>
+
+          {/* CTA Button */}
+          <motion.button
+            className="px-6 sm:px-8 md:px-10 py-3 md:py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-full font-semibold text-sm md:text-base hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {/* Main Heading */}
-            <div className="mb-8">
-              <h2 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Collaboration
-                </span>
-                {" | "}
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Creation
-                </span>
-                {" | "}
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Innovation
-                </span>
-              </h2>
-            </div>
-          </motion.div>
-          {/* Tagline */}
-          <div className="mb-12">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed text-balance">
-                <span className="font-semibold text-white">If you want to go fast, walk ALONE.</span>
-                <br />
-                <span className="font-semibold text-white">If you want to go far, walk TOGETHER.</span>
-              </p>
-            </motion.div>
-          </div>
-
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {/* CTA Buttons */}
-            <div className="flex gap-4 justify-center flex-wrap">
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
-                Get Started
-              </button>
-              <button className="px-8 py-3 border-2 border-slate-300/30 text-slate-300 rounded-full font-semibold hover:bg-white/5 hover:border-slate-300/60 transition-all duration-200">
-                Learn More
-              </button>
-            </div>
-          </motion.div>
-        </div>
-
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-sm text-slate-400">Scroll to explore</span>
-            <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
-        </div>
+            Explore Opportunities
+          </motion.button>
+        </motion.div>
+      </div>
       </Container>
-    </section >
+    </section>
   )
 }

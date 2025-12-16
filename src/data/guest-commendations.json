@@ -1,0 +1,22 @@
+{
+  "commendations": [
+    {
+      "id": 1,
+      "name": "GIBS",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "Your session was truly insightful and provided our students with valuable knowledge and insights. Your expertise and experience were evident throughout your engaging and thought-provoking session. Your contribution has made a significant impact on our students and helped make the IRE talk a success."
+    },
+    {
+      "id": 2,
+      "name": "XIME",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "The team wanted to take a moment to thank you for your insightful and engaging session at our event yesterday. Your presentation was informative and inspiring, and the audience thoroughly enjoyed it. Your knowledge and expertise on the topic were evident, and it was evident from the lively Q&A session that the attendees found your session valuable."
+    },
+    {
+      "id": 3,
+      "name": "ISB",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "We would like to express our sincere gratitude & appreciation for interacting with our PGPpro students. The session was extremely informative and helped students understand the nuances of the Banking and Finance industry. We are sure that the knowledge and insights shared with you will immensely benefit our students."
+    }
+  ]
+}

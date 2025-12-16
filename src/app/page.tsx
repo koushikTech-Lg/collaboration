@@ -4,6 +4,7 @@ import { HeroBanner } from "../sections/home/hero-banner";
 import { InstitutesSection } from "../sections/home/institutes-section"
 import { WorkingSection } from "@/sections/home/working-section";
 import { Footer } from "@/components/layout/footer";
+import { WhatWeOfferSection } from "@/sections/home/whatweoffersection";
 
 
 export default function Home() {
@@ -11,9 +12,10 @@ export default function Home() {
     <main className="w-full">
       <Navbar />
       <HeroBanner />
-        <InstitutesSection />
+        {/* <InstitutesSection />
          <StudentsSection />
-         <WorkingSection />
+         <WorkingSection /> */}
+         <WhatWeOfferSection/>  
          <Footer />
     </main>
   )

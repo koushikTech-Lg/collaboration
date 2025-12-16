@@ -1,0 +1,22 @@
+{
+  "commendations": [
+    {
+      "id": 1,
+      "name": "Sumona Ghosh",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "I have always known Aswini to be a spirited individual. With multiple professional degrees besides his name, he possesses a vast knowledge base and does an excellent job at spreading among his students. He has displayed exemplary energy and skill year after year in disseminating academic advice vis-à-vis career options to hundreds of undergraduate students."
+    },
+    {
+      "id": 2,
+      "name": "Sangeeta Tandon",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "Mr. Aswini Bajaj has been associated with Shri Shikshayatan School, Kolkata for the last three years. He is one of our resource persons for the career orientation sessions that we organize every year in our school with the senior students of the Science, Commerce, and Humanities streams of Classes XI and XII. His sessions are informative, interactive, and motivating. We wish him all the success."
+    },
+    {
+      "id": 3,
+      "name": "Mishu Tripathi",
+      "image": "/placeholder.svg?height=120&width=120",
+      "testimonial": "Informative, Conclusive, and Realistic - Excellent session conducted by Mr. Aswini Bajaj for Management students of TIMSR over financial nuances, alternative investment landscape, and skill sets required for finance managers to be relevant in the market! Thank you for the insightful session for our students. I wish him all the luck and success in his future endeavors."
+    }
+  ]
+}

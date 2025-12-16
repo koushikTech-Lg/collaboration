@@ -1,10 +1,22 @@
 "use client"
 
+import { Navbar } from "@/components/layout/navbar"
+import { ContributeBlogBanner } from "@/sections/students/contribute-blog/contribute-blog-banner"
+import { ContributeInsights } from "@/sections/students/contribute-blog/contribute-insights"
+import { KnowledgeBites } from "@/sections/students/contribute-blog/knowledge-bites"
 import Link from "next/link"
 
 export default function ContributeBlogPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pt-20">
+    <main className="w-full">
+ 
+      <Navbar />
+      <ContributeBlogBanner />
+      <ContributeInsights />
+      <KnowledgeBites />
+
+
+
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Back Button */}
         <Link
