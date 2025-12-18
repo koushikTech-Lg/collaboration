@@ -240,7 +240,7 @@ export function Navbar() {
             <div className="p-6 border-t">
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full px-8 py-3 bg-orange-500 text-white rounded-full font-semibold text-sm hover:bg-orange-600 transition-colors"
+                className="w-[200px] px-8 py-3 bg-orange-500 text-white rounded-full font-semibold text-sm hover:bg-orange-600 transition-colors"
               >
                 Contact Us
               </button>

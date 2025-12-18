@@ -143,6 +143,7 @@
   --radius-4xl: calc(var(--radius) + 16px);
   --bg-primary: #274185; /* Dark Blue Footer */
   --bg-orange: #f47920;
+  --bg-footer: #111827;
 }
 
 /* Replaced invalid @apply with proper CSS properties */

@@ -58,7 +58,7 @@ export function CollaborationWork() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                 How <span className="text-orange-500">Collaboration</span> Work?
               </h2>
               <div className="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, Plus, Minus } from "lucide-react"
+import Container from "@/components/shared/container"
 
 interface FAQItem {
   id: number
@@ -42,6 +43,7 @@ export function FAQSection() {
 
   return (
     <section className="w-full py-16 md:py-20 lg:py-24 px-4 bg-gray-50">
+      <Container>
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -76,7 +78,7 @@ export function FAQSection() {
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
             
@@ -100,7 +102,7 @@ export function FAQSection() {
                   {/* Question Header */}
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="relative z-10 w-full flex items-center justify-between p-6 md:p-8 text-left group/button"
+                    className="relative z-10 w-full flex items-center justify-between p-2 md:p-5 text-left group/button"
                   >
                     <div className="flex items-start gap-4 md:gap-6 flex-1">
                       {/* Animated Number Badge */}
@@ -231,6 +233,7 @@ export function FAQSection() {
           })}
         </div>
       </div>
+      </Container>
     </section>
   )
 }
