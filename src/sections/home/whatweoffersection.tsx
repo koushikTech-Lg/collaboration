@@ -4,6 +4,8 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Container from "@/components/shared/container"
+import { FaGraduationCap, FaUserGraduate, FaBriefcase, FaChalkboardTeacher, FaMicrophoneAlt, FaHandshake, FaPenFancy, FaLaptopCode, FaUserTie, FaUsers, FaIdCard, FaComments } from "react-icons/fa"
+import { IoArrowForward } from "react-icons/io5"
 
 interface SubCard {
   id: string
@@ -28,44 +30,28 @@ export function WhatWeOfferSection() {
     {
       id: "institutes",
       title: "For Institutes",
-      image: "/institutes.png", // Replace with your actual image
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-        </svg>
-      ),
+      image: "/institutes.png",
+      icon: <FaGraduationCap className="w-8 h-8" />,
       subCards: [
         {
           id: "career-seminar",
           title: "Career Seminar",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-            </svg>
-          ),
+          icon: <FaChalkboardTeacher className="w-6 h-6" />,
           href: "/institutes/career-seminar",
         },
         {
           id: "guest-lecture",
           title: "Guest Lecture",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-            </svg>
-          ),
+          icon: <FaMicrophoneAlt className="w-6 h-6" />,
           href: "/institutes/guest-lecture",
         },
         {
           id: "knowledge-partnership",
           title: "Knowledge Partnerships",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-            </svg>
-          ),
+          icon: <FaHandshake className="w-6 h-6" />,
           href: "/institutes/knowledge-partnership",
         },
       ],
@@ -73,44 +59,28 @@ export function WhatWeOfferSection() {
     {
       id: "students",
       title: "For Students",
-      image: "/students.png", // Replace with your actual image
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-        </svg>
-      ),
+      image: "/students.png",
+      icon: <FaUserGraduate className="w-8 h-8" />,
       subCards: [
         {
           id: "blog-contributor",
           title: "Blog Contributor",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-          ),
+          icon: <FaPenFancy className="w-6 h-6" />,
           href: "/students/contribute-blog",
         },
         {
           id: "internship",
           title: "Internship Opportunities",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-          ),
+          icon: <FaLaptopCode className="w-6 h-6" />,
           href: "/students/looking-to-intern",
         },
         {
           id: "hiring",
           title: "Hiring Opportunities",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-          ),
+          icon: <FaUserTie className="w-6 h-6" />,
           href: "/students/want-to-get-hired",
         },
       ],
@@ -118,44 +88,28 @@ export function WhatWeOfferSection() {
     {
       id: "professional",
       title: "For Professional",
-      image: "/working-professional.png", // Replace with your actual image
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
-        </svg>
-      ),
+      image: "/working-professional.png",
+      icon: <FaBriefcase className="w-8 h-8" />,
       subCards: [
         {
           id: "want-to-hire",
           title: "Want to Hire",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
-            </svg>
-          ),
+          icon: <FaUsers className="w-6 h-6" />,
           href: "/working/want-to-hire",
         },
         {
           id: "work-profile",
           title: "Work Profile",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
-            </svg>
-          ),
+          icon: <FaIdCard className="w-6 h-6" />,
           href: "/working/work-profile",
         },
         {
           id: "consulting",
           title: "Consulting",
           description: "Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra. Lorem ipsum dolor sit amet consectetur. Et nunc massa facilisis vitae pharetra.",
-          icon: (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
-            </svg>
-          ),
+          icon: <FaComments className="w-6 h-6" />,
           href: "/working/consulting",
         },
       ],
@@ -169,13 +123,18 @@ export function WhatWeOfferSection() {
       <Container>
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#274185] mb-2">
               What We <span className="text-orange-500">Offer</span>
             </h2>
             <div className="w-20 h-1 bg-orange-500 mx-auto mt-2"></div>
           </div>
-
+          </motion.div>
           {/* Category Tabs */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {categories.map((category) => (
@@ -249,19 +208,7 @@ export function WhatWeOfferSection() {
                         <Link href={card.href}>
                           <div className="flex items-center gap-2 text-orange-500 font-semibold hover:gap-3 transition-all cursor-pointer group">
                             <span>Learn More</span>
-                            <svg
-                              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
+                            <IoArrowForward className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </Link>
                       </div>
@@ -275,4 +222,4 @@ export function WhatWeOfferSection() {
       </Container>
     </section>
   )
-}
+} 

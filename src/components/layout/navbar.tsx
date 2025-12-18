@@ -129,7 +129,7 @@ export function Navbar() {
 
       <nav className="fixed top-6 left-0 right-0 z-50 flex items-center justify-center px-6">
         <Container>
-          <div className={`w-full max-w-7xl backdrop-blur-xl rounded-full shadow-2xl px-8 py-2 transition-all duration-300 ${isScrolled
+          <div className={`w-full max-w-7xl backdrop-blur-xl rounded-full shadow-2xl px-8 py-1 transition-all duration-300 ${isScrolled
             ? 'bg-white/90 border border-gray-200'
             : 'bg-white/10 border border-white/20'
             }`}>
@@ -183,7 +183,7 @@ export function Navbar() {
               </div>
 
               {/* Desktop Contact Button */}
-              <button className="hidden md:block px-8 py-3  bg-orange-500 text-white rounded-full font-semibold text-sm hover:bg-orange-600 hover:shadow-lg hover:scale-105 transition-all duration-200">
+              <button className="hidden md:block  py-2  bg-orange-500 text-white rounded-full font-semibold text-sm hover:bg-orange-600 hover:shadow-lg hover:scale-105 transition-all duration-200 w-32">
                 Contact Us
               </button>
 

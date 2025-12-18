@@ -22,8 +22,8 @@ interface NavMenuProps {
 function ChevronIcon({ isOpen }: { isOpen: boolean }) {
   return (
     <svg
-      width="16"
-      height="16"
+      width="12"
+      height="12"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -96,7 +96,7 @@ export function NavMenu({
         >
           {item.submenu.map((subItem, index) => (
             <Link key={index} href={subItem.href || "/"}>
-              <div className="px-5 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer text-lg">
+              <div className="px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer text-sm">
                 {subItem.label}
               </div>
             </Link>

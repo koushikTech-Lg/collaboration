@@ -5,6 +5,8 @@ import { InstitutesSection } from "../sections/home/institutes-section"
 import { WorkingSection } from "@/sections/home/working-section";
 import { Footer } from "@/components/layout/footer";
 import { WhatWeOfferSection } from "@/sections/home/whatweoffersection";
+import { CollaborationWork } from "@/sections/home/collaboration-work";
+import { FAQSection } from "@/sections/home/faq-section";
 
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
          <StudentsSection />
          <WorkingSection /> */}
          <WhatWeOfferSection/>  
+         <CollaborationWork />
+         <FAQSection />
          <Footer />
     </main>
   )
