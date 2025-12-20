@@ -13,14 +13,6 @@ export function BannerBackground({ children, className = "" }: BannerBackgroundP
   return (
     <section className={`relative w-full min-h-screen bg-[#2d4a8f] overflow-hidden flex items-center justify-center px-4 ${className}`}>
       <Container>
-        {/* Background Grid - Optional, currently commented out */}
-        {/* <div className="absolute inset-0 w-full opacity-10 z-10">
-          <img
-            src="/Gird.png"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div> */}
 
         {/* Background Vectors - Decorative elements */}
         <div className="absolute inset-0 w-full">
@@ -32,7 +24,7 @@ export function BannerBackground({ children, className = "" }: BannerBackgroundP
         </div>
 
         {/* Midjourney Image - Abstract curved lines */}
-        <div className="absolute inset-0 w-full">
+        <div className="absolute inset-0 w-full opacity-80">
           <img
             src="/Midjourney_Image.png"
             alt=""
@@ -59,14 +51,7 @@ export function BannerBackground({ children, className = "" }: BannerBackgroundP
         </div>
       </Container>
 
-      {/* Bottom Torn Paper Edge - Optional, currently commented out */}
-      {/* <div className="absolute -bottom-7 md:-bottom-11 left-0 w-full h-12 md:h-16 lg:h-20 z-10 pointer-events-none">
-        <img
-          src="/Torn-Paper-Edge-12.png"
-          alt=""
-          className="w-full h-full object-fill"
-        />
-      </div> */}
+
     </section>
   )
 }

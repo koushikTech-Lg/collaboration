@@ -49,7 +49,7 @@ export function NavMenu({
   if (!item.submenu) {
     return (
       <Link href={item.href || "/"}>
-        <div className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium ${
+        <div className={`lg:px-5 px-3 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium ${
           isScrolled ? 'text-slate-900' : 'text-white'
         }`}>
           {item.label}
@@ -69,7 +69,7 @@ export function NavMenu({
         <Link href={item.href}>
           <div 
             onClick={onToggle}
-            className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
+            className={`lg:px-5 px-3 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
               isScrolled ? 'text-slate-900' : 'text-white'
             }`}
           >
@@ -80,7 +80,7 @@ export function NavMenu({
       ) : (
         <button
           onClick={onToggle}
-          className={`px-5 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
+          className={`lg:px-5 px-3 py-2 hover:text-orange-400 transition-colors cursor-pointer font-medium flex items-center gap-1 h-full ${
             isScrolled ? 'text-slate-900' : 'text-white'
           }`}
         >
