@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { motion, type Variants } from "framer-motion"
 import Container from "@/components/shared/container"
+import SectionHeader from "@/components/UI/section-header"
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -101,7 +102,7 @@ export function GallerySection() {
   }
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-blue-50 to-white min-h-screen overflow-hidden">
+    <section className="lg:py-20 py-14 px-6 bg-gradient-to-b from-blue-50 to-white min-h-screen overflow-hidden">
       <Container>
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
@@ -112,8 +113,12 @@ export function GallerySection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Gallery</h2>
-            <p className="text-lg text-slate-700">Moments from our Career Seminars</p>
+            {/* <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Gallery</h2>
+            <p className="text-lg text-slate-700">Moments from our Career Seminars</p> */}
+            <SectionHeader
+            title="Passed"
+            highlight="Seminar"
+            description="Moments from our Career Seminars" />
           </motion.div>
 
           {/* Structured Masonry Grid with Animated Items */}
@@ -133,8 +138,7 @@ export function GallerySection() {
                 whileHover={{ scale: 1.02, zIndex: 10 }}
                 onClick={() => setSelectedImage(item.src)}
               >
-                {/* Thick black frame border */}
-                <div className="absolute inset-0 border-[8px] md:border-[12px] border-black rounded-xl pointer-events-none z-10 shadow-inner"></div>
+
 
                 {/* Image Container */}
                 <div className="relative w-full h-full overflow-hidden">
@@ -178,17 +182,21 @@ export function GallerySection() {
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <motion.button
-              className="px-8 py-3 bg-slate-900 text-white rounded-full font-semibold text-lg shadow-lg"
+            <motion.a
+              href="https://aswinibajajclasses.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-(--bg-primary) text-white rounded-full font-semibold text-lg shadow-lg"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
-                y: -4
+                y: -4,
               }}
               whileTap={{ scale: 0.95 }}
             >
               View All Photos
-            </motion.button>
+            </motion.a>
+
           </motion.div>
         </div>
 
@@ -224,7 +232,7 @@ export function GallerySection() {
               {/* Close Button */}
               <motion.button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-2 -right-2 bg-white hover:bg-slate-100 text-slate-900 rounded-full p-3 transition-colors z-20 shadow-2xl"
+                className="absolute -top-2 -right-2 bg-white hover:bg-slate-100 text-(--bg-primary) rounded-full p-3 transition-colors z-20 shadow-2xl"
                 aria-label="Close modal"
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}

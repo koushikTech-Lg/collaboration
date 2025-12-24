@@ -23,7 +23,7 @@ export function SeminarSection({ children, className = "" }: SeminarSectionProps
   }
 
   return (
-    <section className={`w-full py-20 bg-white ${className}`}>
+    <section className={`w-full lg:py-20 py-14 bg-white ${className}`}>
       <Container>
         <motion.div
           variants={containerVariants}

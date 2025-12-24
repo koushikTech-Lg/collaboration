@@ -33,7 +33,7 @@ export function Footer() {
       <Container>
         {/* Main Footer Content */}
         <motion.div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-16 py-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -94,7 +94,7 @@ export function Footer() {
             </motion.div>
 
             {/* Quick Links */}
-            <motion.div variants={sectionVariants} >
+            <motion.div variants={sectionVariants} className="mt-4 lg:mt-0">
               <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
               <motion.div
                 initial={{ width: 0 }}
@@ -132,7 +132,7 @@ export function Footer() {
             </motion.div>
 
             {/* My Verticals */}
-            <motion.div variants={sectionVariants}>
+            <motion.div variants={sectionVariants} className="mt-4 lg:mt-0" >
               <h3 className="text-white font-semibold text-lg mb-4">My Verticals</h3>
               <motion.div
                 initial={{ width: 0 }}
@@ -175,7 +175,7 @@ export function Footer() {
             </motion.div>
 
             {/* Let's Talk */}
-            <motion.div variants={sectionVariants}>
+            <motion.div variants={sectionVariants} className="mt-4 lg:mt-0" >
               <h3 className="text-white font-semibold text-lg mb-4">Let's Talk</h3>
               <motion.div
                 initial={{ width: 0 }}

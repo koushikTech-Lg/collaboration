@@ -2,6 +2,7 @@
 "use client"
 
 import { SpeakerProfileSection, itemVariants } from "@/components/UI/profile-section"
+import SectionHeader from "@/components/UI/section-header"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { FaGraduationCap, FaChalkboardTeacher, FaUniversity, FaBriefcase, FaBuilding } from "react-icons/fa"
@@ -47,11 +48,15 @@ export function SpeakerProfile() {
   return (
     <SpeakerProfileSection>
       {/* Title Section */}
-      <motion.div variants={itemVariants} className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-          <span className="text-slate-900">Speaker's</span> <span className="text-orange-500">Profile</span>
-        </h2>
-        <div className="w-16 h-1 bg-orange-500 mx-auto mt-4"></div>
+      <motion.div variants={itemVariants} className="text-center mb-8 lg:mb-12">
+        {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <span className="text-(--bg-primary)">Speaker's</span> <span className="text-orange-500">Profile</span>
+        </h2> */}
+        <SectionHeader 
+        title="Speaker's"
+        highlight="Profile"
+        />
+        <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-transparent rounded-l-full  mx-auto -mt-5"></div>
       </motion.div>
 
       {/* Main Content Grid */}
@@ -75,7 +80,7 @@ export function SpeakerProfile() {
             <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-3">Aswini Bajaj</h3>
 
             {/* Quote Box */}
-            <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-4 rounded-lg relative">
+            <div className="bg-gradient-to-r from-(--bg-primary) to-blue-700 text-white p-4 rounded-lg relative">
               <div className="absolute -top-2 left-4 text-orange-500 text-3xl">❝</div>
               <p className="text-xs md:text-sm italic leading-relaxed pt-2">
                 Influencers don't influence me. Expertise, Experience & Ethics does!
@@ -127,8 +132,8 @@ export function SpeakerProfile() {
             >
               {/* Icon */}
               <div className="flex mb-3 gap-3 items-center">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <card.icon className="w-6 h-6 text-blue-700" />
+                <div className="w-8 h-8 bg-(--bg-primary) rounded-lg flex items-center justify-center p-1">
+                  <card.icon className="w-5 h-5 text-white" />
                 </div>
                    <h4 className="text-xs font-bold text-blue-900 mb-2 uppercase tracking-wide break-words">
                   {card.title}

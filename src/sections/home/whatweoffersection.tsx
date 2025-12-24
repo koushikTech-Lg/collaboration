@@ -143,7 +143,7 @@ export function WhatWeOfferSection() {
                 onClick={() => setActiveTab(category.id)}
                 className={`relative cursor-pointer rounded-2xl overflow-hidden shadow-lg transition-all duration-300 ${
                   activeTab === category.id
-                    ? "ring-4 ring-blue-500 scale-105"
+                    ? "ring-4 ring-(--bg-primary) scale-105"
                     : "hover:scale-102"
                 }`}
                 whileHover={{ y: -5 }}
@@ -156,7 +156,7 @@ export function WhatWeOfferSection() {
                     className="w-full h-full object-cover"
                   />
                   {/* Icon Badge */}
-                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-(--bg-primary) rounded-full flex items-center justify-center text-white shadow-lg">
                     {category.icon}
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export function WhatWeOfferSection() {
                       <div className="flex flex-col h-full">
                         {/* Icon and Title */}
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 flex-shrink-0">
+                          <div className="w-12 h-12 bg-(--bg-primary) rounded-lg flex items-center justify-center text-white shrink-0">
                             {card.icon}
                           </div>
                           <h3 className="text-lg font-bold text-slate-900 pt-2">

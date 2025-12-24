@@ -35,21 +35,21 @@ export function CareerBanner() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-8 items-center text-left  sm:mt-[100px] lg:mt-0">
                     {/* Left Content */}
-                    <motion.div variants={itemVariants} className="space-y-6">
-                        {/* Label */}
+                    <motion.div variants={itemVariants} className="space-y-6 ">
+                        {/* Label */} 
                         {/* <motion.div variants={itemVariants} className="inline-block">
                             <p className="text-orange-500 font-semibold text-lg">Associate &gt;</p>
                         </motion.div> */}
 
                         {/* Heading */}
-                        <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                        <motion.h1 variants={itemVariants} className=" text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
                             Career <span className="text-orange-500">Seminar</span>
                         </motion.h1>
 
                         {/* Description */}
-                        <motion.p variants={itemVariants} className="text-lg text-slate-200 leading-relaxed max-w-xl">
+                        <motion.p variants={itemVariants} className="lg:text-lg text-sm text-slate-200 leading-relaxed max-w-xl">
                             Discussing CFA, CA, FRM, MBA, CS, etc. career options, and hoping that my first-hand experience in
                             cracking these exams, and lecturing at more than 80+ colleges and corporates will be helpful.
                         </motion.p>
@@ -69,7 +69,7 @@ export function CareerBanner() {
                     </motion.div>
 
                     {/* Right Image */}
-                    <motion.div variants={itemVariants} className="relative h-96 md:h-full min-h-96 
+                    <motion.div variants={itemVariants} className="relative h-32 sm:h-56 lg:h-96 
              [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]
              [-webkit-mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]">
                         <Image

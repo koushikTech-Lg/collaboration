@@ -23,7 +23,7 @@ export function SpeakerProfileSection({ children, className = "" }: SpeakerProfi
   }
 
   return (
-    <section className={`w-full py-16 bg-gradient-to-br from-slate-50 to-white ${className}`}>
+    <section className={`w-full lg:py-16 bg-gradient-to-br from-slate-50 to-white ${className}`}>
       <Container>
         <motion.div
           variants={containerVariants}

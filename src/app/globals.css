@@ -144,6 +144,7 @@
   --bg-primary: #274185; /* Dark Blue Footer */
   --bg-orange: #f47920;
   --bg-footer: #111827;
+  --text-primary: #274185;
 }
 
 /* Replaced invalid @apply with proper CSS properties */
