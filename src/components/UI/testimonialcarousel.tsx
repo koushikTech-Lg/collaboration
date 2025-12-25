@@ -15,9 +15,9 @@ interface TestimonialCarouselProps {
   autoPlayInterval?: number
 }
 
-export function TestimonialCarousel({ 
-  testimonials, 
-  autoPlayInterval = 4000 
+export function TestimonialCarousel({
+  testimonials,
+  autoPlayInterval = 4000
 }: TestimonialCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(1)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -107,15 +107,14 @@ export function TestimonialCarousel({
                     {/* Avatar Container */}
                     <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 md:ml-8 mt-12 md:mt-0">
                       <div
-                        className={`rounded-full overflow-hidden border-2 transition-all duration-500 size-20 ${
-                          isActive
+                        className={`rounded-full overflow-hidden border-2 transition-all duration-500 size-20 ${isActive
                             ? 'border-(--text-primary) shadow-lg shadow-blue-500/30 size-20'
                             : 'border-gray-200 size-10'
-                        }`}
+                          }`}
                       >
                         <Image
-                        width={500}
-                        height={500}
+                          width={500}
+                          height={500}
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
                           className=" object-cover"
@@ -141,11 +140,10 @@ export function TestimonialCarousel({
         {/* Right Side - Testimonial Text */}
         <div className="flex-1 flex items-center ">
           <div
-            className={`bg-white  rounded-3xl p-6 md:p-8 shadow-lg border-l-4 border-(--text-primary) transition-all duration-600 w-full ${
-              isAnimating
+            className={`bg-white  rounded-3xl p-6 md:p-8 shadow-lg border-l-4 border-(--text-primary) transition-all duration-600 w-full ${isAnimating
                 ? 'opacity-0 translate-y-4'
                 : 'opacity-100 translate-y-0'
-            }`}
+              }`}
           >
             {/* Large Quote Mark */}
             <div className="text-5xl md:text-8xl font-serif text-gray-300 leading-none ">

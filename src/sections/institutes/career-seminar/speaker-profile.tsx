@@ -37,13 +37,13 @@ export function SpeakerProfile() {
     },
   ]
 
-  const socialLinks = [
-    { icon: FaYoutube, href: "https://youtube.com", label: "YouTube", color: "hover:text-red-600" },
-    { icon: FaInstagram, href: "https://instagram.com", label: "Instagram", color: "hover:text-pink-600" },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-blue-600" },
-    { icon: FaFacebook, href: "https://facebook.com", label: "Facebook", color: "hover:text-blue-700" },
-    { icon: FaTwitter, href: "https://twitter.com", label: "Twitter", color: "hover:text-blue-400" },
-  ]
+    const socialLinks = [
+      { icon: FaYoutube, href: "https://youtube.com", label: "YouTube", color: "hover:text-red-600" },
+      { icon: FaInstagram, href: "https://instagram.com", label: "Instagram", color: "hover:text-pink-600" },
+      { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-blue-600" },
+      { icon: FaFacebook, href: "https://facebook.com", label: "Facebook", color: "hover:text-blue-700" },
+      { icon: FaTwitter, href: "https://twitter.com", label: "Twitter", color: "hover:text-blue-400" },
+    ]
 
   return (
     <SpeakerProfileSection>
@@ -68,7 +68,7 @@ export function SpeakerProfile() {
             {/* Profile Image */}
             <div className="w-28 h-28 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 rounded-full overflow-hidden border-4 border-blue-100">
               <Image
-                src="/professional-man-profile.jpg"
+                src="/ab_profile.jpg"
                 alt="Aswini Bajaj"
                 width={128}
                 height={128}

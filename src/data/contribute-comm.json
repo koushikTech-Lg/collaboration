@@ -1,0 +1,22 @@
+{
+  "commendations": [
+    {
+      "id": 1,
+      "name": "Shreedhar Mohta",
+      "image": "/836.jpg",
+      "testimonial": "I was a little hesitant to put myself out there when I wrote my first blog, but I soon realized it was a very fulfilling experience. The sense of responsibility it fosters is among my favorite aspects of writing a blog or report. I've had the chance to share my ideas and thoughts with people via writing blogs."
+    },
+    {
+      "id": 2,
+      "name": "Smriti Agarwal",
+      "image": "/836.jpg",
+      "testimonial": "From knowing nothing about blogs to writing one myself, I had a great learning experience. Besides writing, it has enhanced my research skills too. My comprehensive work on stock reports has increased my understanding of report analysis and document delivery grateful to leveraged growth."
+    },
+    {
+      "id": 3,
+      "name": "Siddharth Khandelwal",
+      "image": "/836.jpg",
+      "testimonial": "Writing these blogs has increased my curiosity Getting the opportunity to research these topics and then simplify them for writing a blog helps me practice the Feynman technique of learning first-hand. Writing these blogs has increased my curiosity about the immensely vast and esoteric world of finance."
+    }
+  ]
+}

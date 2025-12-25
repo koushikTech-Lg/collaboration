@@ -1,4 +1,3 @@
-// app/sections/achievement-counter.tsx (or wherever your content files are)
 "use client"
 
 import { motion, type Variants } from "framer-motion"
@@ -7,12 +6,12 @@ import { StatsCounter } from "@/components/UI/statscounter"
 import SectionHeader from "@/components/UI/section-header"
 
 const counters = [
-  { value: 80, label: "Seminars Held", suffix: "+" },
-  { value: 5000, label: "Students Addressed", suffix: "+" },
-  { value: 40, label: "Cities Covered", suffix: "+" },
+ { value: 50, label: "Report Prepared", suffix: "+" },
+  { value: 14, label: "Number of Contributors", suffix: "+" },
+  { value: 70, label: "Number of Readers", suffix: "+" },
 ]
 
-export function AchievementCounter() {
+export function ContributeAchievementCounter() {
   const itemVariants : Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -48,7 +47,7 @@ export function AchievementCounter() {
             <SectionHeader
             title="Our"
             highlight="Achievements"
-            description=" Making a significant impact through quality education and professional development" 
+           
             />
           </motion.div>
 

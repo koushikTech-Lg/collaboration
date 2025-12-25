@@ -8,21 +8,21 @@ const sessions = [
     {
         id: 1,
         title: "Role of Finance in Strategy - IIM Kashipur",
-        image: "/guest-lecture-poster-iim-kashipur-finance-strategy.jpg",
+        image: "/234.png",
         date: "December 11th 2020",
         venue: "Indian Institute of Management Kashipur",
     },
     {
         id: 2,
         title: "Panel Discussion - Indian Stock Market",
-        image: "/panel-discussion-poster-finvest-stock-market-econo.jpg",
+        image: "/IIM-Trichy-Panel-Discussion.png",
         date: "January 8, 2022",
         venue: "FINVEST x NTSIHTA",
     },
     {
         id: 3,
         title: "FINZEAL 2.0 - DTU Guest Speaker",
-        image: "/finzeal-event-poster-dtu-delhi-guest-speaker.jpg",
+        image: "/DSM-Delhi-Technological-University.jpeg",
         date: "24th March 2023",
         venue: "Delhi School of Management, DTU",
     },
@@ -42,8 +42,8 @@ export function PastSessionsGallery() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                            <span className="text-slate-700">Past </span>
-                            <span className="text-cyan-500">Sessions</span>
+                            <span className="text-(--text-primary)">Past </span>
+                            <span className="text-orange-500">Sessions</span>
                         </h2>
                     </motion.div>
 
